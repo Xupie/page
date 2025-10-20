@@ -1,20 +1,28 @@
 'use client'
-import Image from 'next/image'
+import Link from 'next/link';
+import { LogoGithub } from './logo';
 
 export default function Header() {
     return (
-        <header className='static h-3'>
-            <nav>
-                <a href="/about">About</a>
-                <a href="/skills">Skills</a>
-                <a href="/projects">Projects</a>
-                <a className="relative w-6 h-6" href="http://">
-                    <Image
-                        src={`/github/github-mark.svg`}
-                        alt={'logo of github'}
-                        fill={true}
-                    />
-                </a>
+        <header>
+            <nav className='py-3 w-full px-20 flex items-center justify-between'>
+                <ul className='ms-1 flex gap-8 items-center'>
+                    <li className='hover'>
+                        <Link href="/">Home</Link>
+                    </li>
+                    <li className='hover'>
+                        <Link href="/about">About</Link>
+                    </li>
+                    <li className='hover'>
+                        <Link href="/skills">Skills</Link>
+                    </li>
+                    <li className='hover'>
+                        <Link href="/projects">Projects</Link>
+                    </li>
+                </ul>
+                <div className='nav-right'>
+                    <LogoGithub />
+                </div>
             </nav>
         </header>
     );

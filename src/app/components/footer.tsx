@@ -1,8 +1,12 @@
 'use client'
+import { LogoGithub } from "./logo";
+
 export default function Footer() {
     return (
-        <footer>
-            <h1>Hello world</h1>
+        <footer className="flex justify-center mb-4">
+            <div className='flex justify-around'>
+                <LogoGithub />
+            </div>
         </footer>
     );
 }

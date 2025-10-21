@@ -1,10 +1,11 @@
 'use client'
 import Link from 'next/link';
 import { LogoGithub } from './logo';
+import ThemeSwitch from './themeChanger';
 
 export default function Header() {
     return (
-        <header>
+        <header className='dark:bg-black'>
             <nav className='py-3 w-full px-20 flex items-center justify-between'>
                 <ul className='ms-1 flex gap-8 items-center'>
                     <li className='hover'>
@@ -20,8 +21,9 @@ export default function Header() {
                         <Link href="/projects">Projects</Link>
                     </li>
                 </ul>
-                <div className='nav-right'>
+                <div className='nav-right flex items-center'>
                     <LogoGithub />
+                    <ThemeSwitch />
                 </div>
             </nav>
         </header>

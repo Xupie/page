@@ -21,6 +21,7 @@ export function LogoGithub() {
         height={36}
         className={"hover"}
         loading={"lazy"}
+        unoptimized={true} // https://nextjs.org/docs/app/api-reference/components/image#unoptimized
       />
     </a>
   );

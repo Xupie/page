@@ -10,24 +10,18 @@ export function LogoGithub() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      {resolvedTheme === "dark" ? (
-        <Image
-          src={`/github/github-mark-white.svg`}
-          alt={"logo of github"}
-          width={36}
-          height={36}
-          className={"hover"}
-          loading={"lazy"}
-        />
-      ) : (
-        <Image
-          src={`/github/github-mark.svg`}
-          alt={"logo of github"}
-          width={36}
-          height={36}
-          loading={"lazy"}
-        />
-      )}
+      <Image
+        src={
+          resolvedTheme === "dark"
+            ? `/github/github-mark-white.svg`
+            : `/github/github-mark.svg`
+        }
+        alt={"logo of github"}
+        width={36}
+        height={36}
+        className={"hover"}
+        loading={"lazy"}
+      />
     </a>
   );
 }

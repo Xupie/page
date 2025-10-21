@@ -1,6 +1,8 @@
-import Image from "next/image";
+"use client"
+
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
+
 // https://www.npmjs.com/package/next-themes#avoid-hydration-mismatch
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false); 

@@ -7,10 +7,8 @@ export const metadata: Metadata = {
 
 export default function GlobalNotFound() {
     return (
-        <html lang="en">
-            <body>
-                <h1>404 - Page not found</h1>
-            </body>
-        </html>
+        <div>
+            <h1>404 - Page not found</h1>
+        </div>
     );
 }

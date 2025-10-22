@@ -21,7 +21,6 @@ export function LogoGithub() {
         width={36}
         height={36}
         className={"hover"}
-        loading={"lazy"}
         unoptimized={true} 
       />
     </a>
@@ -40,7 +39,6 @@ export function HamburgerMenu() {
       width={36}
       height={36}
       className={"hover"}
-      loading={"lazy"}
       unoptimized={true}
     />
   );

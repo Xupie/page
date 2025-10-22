@@ -2,49 +2,93 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+/* Light Theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f0f1f0;
+  --foreground: #141619;
+
+  --color-primary: #7c3aed;
+  --color-surface: #B3B4BD;
+  --color-surface-dark: #2C2E3A;
+  --color-hover: #6d38eb;
 }
 
+/* Dark Theme */
 [data-theme='dark'] {
-  --background: #171717;
-  --foreground: #ffffff;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  --color-primary: #7c3aed;
+  --color-surface: #1a1a1a;
+  --color-surface-light: #bbbbbb;
+  --color-hover: #6b41cc;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-primary: var(--color-primary);
+  --color-surface: var(--color-surface);
+  --color-hover: var(--color-hover);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-[data-theme='dark'] {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-inter: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background 300ms ease, color 300ms ease;
 }
 
-[data-theme='dark'] {
-  .hover:hover { filter: brightness(.75); }
-  a { color: white; }
+.nav-link {
+  font-family: var(--font-inter);
+  font-size: 1.2rem;
 }
 
 [data-theme='light'] {
-  .hover:hover { 
-    color: rgb(109, 56, 235); 
-    transition: cubic-bezier();
-    transition-duration: 150ms;
+  .nav-link:hover {
+    color: var(--color-hover);
   }
-  .hover { 
+
+  .nav-link {
     transition: cubic-bezier();
-    transition-duration: 500ms;
+    transition-duration: 350ms;
+  }
+}
+
+[data-theme='dark'] {
+  .nav-link:hover {
+    color: var(--color-hover);
+  }
+}
+
+.theme-switch {
+  background-color: var(--color-surface);
+  position: relative;
+  width: 2.75rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 250ms ease;
+
+  /* slider */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    inset-inline-start: 2px;
+    height: 1.25rem;
+    width: 1.25rem;
+    transition: all 250ms ease;
+    background-color: white;
+    border-radius: 100%;
+  }
+
+  /* Dark mode */
+  input:checked+& {
+    background-color: var(--color-primary);
   }
 }

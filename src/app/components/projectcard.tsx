@@ -17,17 +17,20 @@ const ProjectCard: FC<ProjectCardProps> = ({
   source = "",
 }) => {
   return (
-    <div>
-      <h2>{project}</h2>
-      <div className="relative h-10">
-        <Image 
-            src={img_url} 
-            alt={img_alt} 
-            fill={true} 
-            loading={`lazy`} 
+    <div className="px-4 border-2 rounded-md shadow-2xl">
+      <h2 className="text-lg font-semibold mb-2">{project}</h2>
+      <div className="relative w-full h-32 mb-3">
+        <Image
+          src={img_url}
+          alt={img_alt}
+          fill={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading={`lazy`}
         />
       </div>
-      <a href="b">Source</a>
+      <a href={source} target="_blank" rel="noopener noreferrer">
+        Source
+      </a>
     </div>
   );
 };

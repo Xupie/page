@@ -3,7 +3,6 @@ import { useTheme } from "next-themes";
 
 export function LogoGithub() {
   const { resolvedTheme } = useTheme();
-
   return (
     <a
       href="https://github.com/Xupie"
@@ -24,5 +23,23 @@ export function LogoGithub() {
         unoptimized={true} // https://nextjs.org/docs/app/api-reference/components/image#unoptimized
       />
     </a>
+  );
+}
+
+export function HamburgerMenu() {
+  const { resolvedTheme } = useTheme();
+  return (
+    <Image
+      src={
+        resolvedTheme === "dark"
+          ? `/hamburger-menu/hamburger-menu-white.svg`
+          : `/hamburger-menu/hamburger-menu.svg`}
+      alt={"icon of mobile navigation menu"}
+      width={36}
+      height={36}
+      className={"hover"}
+      loading={"lazy"}
+      unoptimized={true} // https://nextjs.org/docs/app/api-reference/components/image#unoptimized
+    />
   );
 }

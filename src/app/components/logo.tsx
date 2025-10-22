@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
+// https://nextjs.org/docs/app/api-reference/components/image#unoptimized
+
 export function LogoGithub() {
   const { resolvedTheme } = useTheme();
   return (
@@ -20,7 +22,7 @@ export function LogoGithub() {
         height={36}
         className={"hover"}
         loading={"lazy"}
-        unoptimized={true} // https://nextjs.org/docs/app/api-reference/components/image#unoptimized
+        unoptimized={true} 
       />
     </a>
   );
@@ -39,7 +41,7 @@ export function HamburgerMenu() {
       height={36}
       className={"hover"}
       loading={"lazy"}
-      unoptimized={true} // https://nextjs.org/docs/app/api-reference/components/image#unoptimized
+      unoptimized={true}
     />
   );
 }

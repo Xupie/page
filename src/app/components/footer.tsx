@@ -3,7 +3,7 @@ import { LogoGithub } from "./logo";
 
 export default function Footer() {
     return (
-        <footer className="flex justify-center my-4">
+        <footer className="justify-center my-4">
             <div className='flex justify-around'>
                 <LogoGithub />
             </div>

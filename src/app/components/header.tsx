@@ -41,8 +41,9 @@ export default function Header() {
                 {/* Mobile menu */}
                 <div className='relative md:hidden w-full px-4'>
                     <button
+                        type='button'
                         onClick={() => handleClick()}
-                        className={`ms-auto mt-2 items-center  ${isMenuOpen ? 'rotate-90' : 'rotate-0'} transition delay-50 duration-300 `}
+                        className={` ms-auto mt-2 items-center  ${isMenuOpen ? 'rotate-90' : 'rotate-0'} transition delay-50 duration-300 `}
                         aria-controls='mobile-nav'
                         aria-expanded={isMenuOpen}
                     >

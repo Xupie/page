@@ -4,8 +4,8 @@ import Skills from "./components/home/skills";
 
 export default function Home() {
   return (
-    <main className="bg-surface mx-4 md:mx-20 rounded-xl">
-      <div className="mx-auto p-4 md:px-10">
+    <main className="bg-surface mx-4 lg:max-w-6xl lg:mx-auto rounded-xl">
+      <div className="mx-auto p-4 md:px-12">
         <About />
         <Skills />
         <Projects />
